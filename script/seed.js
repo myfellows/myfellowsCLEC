@@ -9,7 +9,10 @@ async function seed() {
 
   const fellowships = await Promise.all([
     Fellowship.create({name: 'Timothy'}),
-    Fellowship.create({name: 'Daniel'})
+    Fellowship.create({name: 'Daniel'}),
+    Fellowship.create({name: 'Samuel'}),
+    Fellowship.create({name: 'David'}),
+    Fellowship.create({name: 'Joseph'})
   ])
 
   console.log(`seeded ${fellowships.length} users`)
