@@ -6,3 +6,6 @@
 export {default as Navbar} from './navbar'
 export {default as UserHome} from './user-home'
 export {Login, Signup} from './auth-form'
+export {default as Profile} from './profile'
+export {default as Fellowship} from './fellowship'
+export {default as SingleFellowship} from './single-fellowship'
