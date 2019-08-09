@@ -6,9 +6,6 @@ const Fellowship = db.define('fellowship', {
   name: {
     type: Sequelize.STRING,
     allowNull: false
-  },
-  members: {
-    type: Sequelize.INTEGER
   }
 })
 
