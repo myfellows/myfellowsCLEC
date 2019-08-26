@@ -1,6 +1,6 @@
 const User = require('./user')
 const Fellowship = require('./fellowship')
-
+const Event = require('./events')
 /**
  * If we had any associations to make, this would be a great place to put them!
  * ex. if we had another model called BlogPost, we might say:
@@ -16,8 +16,9 @@ const Fellowship = require('./fellowship')
  */
 
 Fellowship.hasMany(User)
-
+Event.belongsToMany(User, {through: 'User_Event'})
 module.exports = {
   User,
-  Fellowship
+  Fellowship,
+  Event
 }

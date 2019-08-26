@@ -14,7 +14,29 @@ async function seed() {
     Fellowship.create({name: 'David'}),
     Fellowship.create({name: 'Joseph'})
   ])
-
+  const users = await Promise.all([
+    User.create({
+      firstName: 'cody',
+      lastName: 'cody',
+      email: 'cody@email.com',
+      password: '123',
+      fellowshipId: '2'
+    }),
+    User.create({
+      firstName: 'Judo',
+      lastName: 'Juju',
+      email: 'Judo@email.com',
+      password: '123',
+      fellowshipId: '3'
+    }),
+    User.create({
+      firstName: 'Judo',
+      lastName: 'Chop',
+      email: 'Judo22@email.com',
+      password: '123',
+      fellowshipId: '3'
+    })
+  ])
   console.log(`seeded ${fellowships.length} users`)
   console.log(`seeded successfully`)
 }

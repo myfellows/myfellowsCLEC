@@ -8,7 +8,9 @@ import {
   UserHome,
   Profile,
   Fellowship,
-  SingleFellowship
+  SingleFellowship,
+  Events,
+  AllEvents
 } from './components'
 import {me} from './store'
 
@@ -28,6 +30,8 @@ class Routes extends Component {
         {/* Routes placed here are available to all visitors */}
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
+        <Route path="/events" component={Events} />
+        <Route path="/allevents" component={AllEvents} />
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}
